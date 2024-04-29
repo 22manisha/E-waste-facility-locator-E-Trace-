@@ -91,7 +91,7 @@ const user = getUser();
           <Image
             src={logo}
             alt="ETrace"
-            width={115}
+            width={112}
             height={100}
             className="logo ml-4 logo md:ml-16 "
           />
@@ -136,7 +136,8 @@ const user = getUser();
               className="md:mr-8 text-sm md:text-xl font-semibold"
               onClick={handleToggleDropdown}
             >
-              {user.username.charAt(0).toUpperCase() + user.username.slice(1)}
+              {/* {user.username.toUpperCase() + user.username.slice(1)} */}
+              {user && user.username && user.username.charAt(0).toUpperCase() + user.username.slice(1)}
             </button>
             {isDropdownOpen && (
               <div className="absolute top-12 right-0 projects p-4  shadow-md divide-y rounded-lg w-44 mt-2">
