@@ -38,7 +38,7 @@ const SignUp: React.FC = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/auth/register",
+        "https://elocate-server.onrender.com/api/v1/auth/register",
         formData
       );
 
@@ -188,7 +188,6 @@ const SignUp: React.FC = () => {
           </Link>
         </div>
       </div>
-      
     </>
   );
 };

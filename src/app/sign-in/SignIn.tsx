@@ -30,7 +30,7 @@ const Signin: React.FC = () => {
     toast.loading("Loading..")
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/auth/login",
+        "https://elocate-server.onrender.com/api/v1/auth/login",
         formData
       );
       const  user  = response.data;
@@ -144,36 +144,3 @@ const Signin: React.FC = () => {
 };
 
 export default Signin;
-
-
-// import { GoogleLogin, GoogleLoginResponse, GoogleLoginResponseOffline } from 'react-google-login';
-
-// const ClientId = "492838959885-fvin5d4dvvupqv97cm23h6m9gm5a7jfg.apps.googleusercontent.com";
-
-// function Login() {
-
-//   const onSuccess = (res: GoogleLoginResponse | GoogleLoginResponseOffline) => {
-//     if ('profileObj' in res) {
-//       console.log("LOGIN SUCCESS! Current user: ", res.profileObj);
-//     } else {
-//       // Handle offline response
-//     }
-//   };
-
-//   const onFailure = (res: any) => {
-//     console.log("LOGIN FAILED! res:", res);
-//   };
-
-//   return (
-//     <div id="signInButton">
-//       <GoogleLogin
-//         clientId={ClientId}
-//         buttonText="Login"
-//         onSuccess={onSuccess}
-//         onFailure={onFailure}
-//         cookiePolicy={'single_host_origin'}
-//         isSignedIn={true}
-//       />
-//     </div>
-//   );
-// }
