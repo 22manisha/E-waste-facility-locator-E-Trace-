@@ -30,7 +30,7 @@ const Signin: React.FC = () => {
     toast.loading("Loading..")
     try {
       const response = await axios.post(
-        "https://elocate-server.onrender.com/api/v1/auth/login",
+        "https://etrace-server.onrender.com",
         formData
       );
       const  user  = response.data;
