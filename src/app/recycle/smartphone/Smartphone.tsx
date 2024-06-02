@@ -53,7 +53,7 @@ const Smartphone: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    fetch("https://etrace-server.onrender.com")
+    fetch("https://etrace-server.onrender.com/api/v1/facility")
       .then((response) => response.json())
       .then((data) => {
         setFacilityData(data);
@@ -212,7 +212,7 @@ const Smartphone: React.FC = () => {
       setIsLoading(true)
 
       try {
-        const response = await fetch("https://etrace-server.onrender.com", {
+        const response = await fetch("https://etrace-server.onrender.com/api/v1/booking", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

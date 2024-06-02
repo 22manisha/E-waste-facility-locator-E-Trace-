@@ -30,7 +30,7 @@ const Signin: React.FC = () => {
     toast.loading("Loading..")
     try {
       const response = await axios.post(
-        "https://etrace-server.onrender.com",
+        "https://etrace-server.onrender.com/api/v1/auth/login",
         formData
       );
       const  user  = response.data;

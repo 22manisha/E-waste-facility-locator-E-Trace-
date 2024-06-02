@@ -38,7 +38,7 @@ const SignUp: React.FC = () => {
 
     try {
       const response = await axios.post(
-        "https://etrace-server.onrender.com",
+        "https://etrace-server.onrender.com/api/v1/auth/register",
         formData
       );
 
